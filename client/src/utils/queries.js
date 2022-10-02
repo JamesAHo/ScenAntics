@@ -1,12 +1,13 @@
 import { gql } from '@apollo/client';
 
-export const QUERY_THOUGHTS = gql`
-  query getThoughts {
-    thoughts {
+export const LOGIN_QUERY = gql`
+mutation Login($email: String!, $password: String!) {
+  login(email: $email, password: $password) {
+    token
+    user {
       _id
-      thoughtText
-      thoughtAuthor
-      createdAt
     }
   }
+}
+  
 `;
