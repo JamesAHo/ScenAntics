@@ -17,18 +17,18 @@ export default function Login(){
 
     const handleSubmit=(e)=>{
         e.preventDefault();
-        authenticateUser();
+        // authenticateUser();
     }
 
-    const authenticateUser = () =>{
-
-    }
+    // const authenticateUser = () =>{
+    //     This is where autentication will go
+    // }
 
     return(
         <form className="mt-8 space-y-6">
         <div className="-space-y-px">
             {
-                fields.map(field=>
+                inputs.map(field=>
                         <Input
                             key={field.id}
                             handleChange={handleChange}

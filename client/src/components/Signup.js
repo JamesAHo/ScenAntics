@@ -27,11 +27,11 @@ export default function Signup(){
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
         <div className="">
         {
-                fields.map(field=>
+                inputs.map(field=>
                         <Input
                             key={field.id}
                             handleChange={handleChange}
-                            value={signupState[field.id]}
+                            value={signupInputs[field.id]}
                             labelText={field.labelText}
                             labelFor={field.labelFor}
                             id={field.id}
