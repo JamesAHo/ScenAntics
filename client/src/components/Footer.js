@@ -17,8 +17,8 @@ footingStyle: {
 function Footer() {
   return (
     <footer style={styles.footerStyle} className="footer">
-      <h1 style={styles.footingStyle}>Drink and Play Responsively<br></br> ©ScenAntics</h1>
-      <a href="https://github.com/JamesAHo/movie-time"><img src="https://img.icons8.com/color/48/000000/github--v1.png" alt="Github" className="icon"/></a>
+      <h1 class="flex  items-center justify-center" >Drink and Play Responsively<br></br> ©ScenAntics</h1>
+      <a class= "absolute bottom-0 right-0" href="https://github.com/JamesAHo/movie-time"><img src="https://img.icons8.com/color/48/000000/github--v1.png" alt="Github" className="icon"/></a>
     
     </footer>
   );
