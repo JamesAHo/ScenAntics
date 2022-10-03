@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { loginInputs } from "../constants/formInputs";
 import Input from "./Input";
+import RememberForm from "./RememberForm";
+import ActionForm from "./ActionForm";
 
 const inputs=loginInputs;
 let inputState = {};
@@ -13,6 +15,14 @@ export default function Login(){
         setLoginState({...loginState,[e.target.id]:e.target.value})
     }
 
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        authenticateUser();
+    }
+
+    const authenticateUser = () =>{
+
+    }
 
     return(
         <form className="mt-8 space-y-6">
@@ -35,6 +45,9 @@ export default function Login(){
                 )
             }
         </div>
+
+        <RememberForm/>
+        <ActionForm handleSubmit={handleSubmit} text="Login"/>
 
        
 
