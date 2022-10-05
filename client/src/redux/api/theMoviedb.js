@@ -9,7 +9,7 @@ export const moviesDB = createApi({
         return {
             getMoviesDB: builder.query({
                 query: () => ({
-                    url: `/discover/movie?api_key=${REACT_APP_API_KEY}&with_network=123&language=en-US`,
+                    url: `/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&with_network=123&language=en-US`,
                     method: 'GET',
                 }),
             }),
@@ -17,7 +17,7 @@ export const moviesDB = createApi({
                 query: (info) => {
                     const {id} = info;
                     return {
-                        url: `/movie/${id}?language=en-US&api_key=${REACT_APP_API_KEY}`,
+                        url: `/movie/${id}?language=en-US&api_key=${process.env.REACT_APP_API_KEY}`,
                         method: 'GET',
                     }
                 }

@@ -1,43 +1,26 @@
-import {useEffect,  useState} from 'react'
-import axios from 'axios'
-import MovieCard from '../components/MovieCard'
-
-
-
-
+import { useEffect, useState } from "react";
+import axios from "axios";
+import MovieCard from "../components/MovieCard";
+import { useGetMoviesDBQuery } from "../redux/api/theMoviedb";
+import Loader from "../components/Loader";
 
 function MovieList() {
-    const [movies, setMovies] = useState([])
-    
-    // const getData = async () => {
-    //     const {data: {results}} = await axios.get(`${process.env.REACT_APP_MOVIE_API}/discover/movie?sort_by=popularity.desc`, {
-    //         params: {api_key: process.env.REACT_APP_API_KEY}
-    //     })
-    //     // const userdata = {re}
-    //     console.log(results)
-    //     setMovies(results)
-    // }
-    // use effect for data
+  const { data, isFetching } = useGetMoviesDBQuery();
+  if (isFetching) return <Loader title="Loading movies" />;
 
+  const movieDB = data?.results;
 
-
-
-    
-    useEffect(() => {
-
-        getData()
-
-    },[])
-    // render movie
-    
-     
-
-// return the components
+  console.log(movieDB);
+  // return the components
   return (
-    <div >
-        
-        {displayMovie()}
-
+    <div>
+      {movieDB.map((movie) => (
+        <MovieCard
+          key={movie.id}
+          title={movie.original_title || movie.original_name || movie.title}
+          img={movie?.poster_path}
+        />
+      ))}
     </div>
   );
 }
