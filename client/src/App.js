@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import {setContext} from '@apollo/client/link/context'
 import Header from "./components/Header"
@@ -7,6 +7,7 @@ import Footer from "./components/Footer"
 import Navbar from './components/Navbar';
 import Signup from './pages/Signup';
 import Login from './pages/Login'; 
+import MovieList from './pages/MovieList';
 // import app.css
 
 
@@ -31,30 +32,16 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <div className="min-h-full h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-    <div className="max-w-md w-full space-y-8">
-      <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login/>}/>
-        <Route path="/signup" element={<Signup/>}/>
-      </Routes>
-    </BrowserRouter>
-    </div>
-    </div>
-    
-    // <ApolloProvider client={client}>
-    //     <div className="App">
-
-    //       <Router>
-    //         <Navbar />
-    //         <Header />
-    //         <Footer />
-          
-    //       </Router>
-    //   </div>
+    <ApolloProvider client={client}>
+      <div className="App">
+            <Navbar />
+            <Header />
+            <MovieList/>
+            <Footer />
+      </div>
 
 
-    // </ApolloProvider>
+    </ApolloProvider>
   );
 }
 

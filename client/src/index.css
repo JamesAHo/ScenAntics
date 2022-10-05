@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: Montserrat;
+    font-weight: bold;
+    box-sizing: border-box;
+    transition: .3s;
+  }
+  
+html{
+    overflow: hidden;
+  }
