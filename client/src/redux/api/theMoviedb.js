@@ -7,7 +7,21 @@ export const MovieDBApi = createApi({
         baseUrl: 'https://api.themoviedb.org/3'
     }),
     endpoints:(builder) => ({
-        getMoviedb: builder.query({query: () => '/discover/movie?sort_by=popularity.desc'})
+
+        getDiscover: builder.query({
+            query: () => ({
+              url: `/discover/movie?api_key=${REACT_APP_API_KEY}&with_network=123&language=en-US`,
+              method: "GET",
+            }),
+        getMoviebyID:(builder) => ({
+            query: (info) => {
+                const {id } = info;
+                return {
+                    url: `/movie${id}?language=en-US&api_key=${REACT_APP_API_KEY}`
+                }
+            }
+        })
+          }),
     }),
 })
-export const {useGetMoviedbQuery} = MovieDBApi
+export const {useGetDiscoverQuery, useGetMovieByIdQuery } = MovieDBApi
