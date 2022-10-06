@@ -36,12 +36,12 @@ function App() {
         <Navbar />
         <Header />
         {/* this might have to be rearranged vvv */}
-        <div className="flex items-center justify-center h-screen">
+        <div className="container">
+        <div className="flex items-center justify-center">
       <div className="flex gap-x-4">
-        <Play className="bg-green-500 w-full h-40 px-40 m-6 text-4xl rounded-lg">Start Game</Play>
+        <Play/>
         </div>
         </div>
-        <div class="container">
           <Routes>
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<Signup />} />
