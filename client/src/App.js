@@ -8,7 +8,7 @@ import Navbar from './components/Navbar';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Play from './components/Play';
-
+import Genre from './pages/Genre';
 
 // creating backend graphql link to initialize authentication
 const backendLink = createHttpLink({
@@ -45,7 +45,7 @@ function App() {
           <Routes>
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<Signup />} />
-            {/* <Route path='/genre' element={Genre />}/> */}
+            <Route path='/genre' element={<Genre />}/>
           </Routes>
         </div>
         {/* <MovieList/> */}
