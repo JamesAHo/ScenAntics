@@ -8,6 +8,9 @@ import Navbar from './components/Navbar';
 import Signup from './pages/Signup';
 import Login from './pages/Login'; 
 import MovieList from './pages/MovieList';
+import Play from './components/Play'
+import Genre from './pages/Genre'
+import SingleMoviePage from './components/SingleMovie';
 // import app.css
 
 
@@ -33,23 +36,26 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
+      
       <div className="App">
+       
         <Navbar />
         <Header />
         {/* this might have to be rearranged vvv */}
-        <div className="container">
-        <div className="flex items-center justify-center">
-      <div className="flex gap-x-4">
-        <Play/>
-        </div>
-        </div>
+       
+      <div className=" h-[calc(100vh-100px)] overflow-y-scroll hide-scrollbar flex xl:flex-row flex-col-reverse">
+        {/* <Play/> */}
+         <div className="flex-1 h-fit pb-40">
           <Routes>
+            <Route path='/' element={<MovieList/>} />
             <Route path='/login' element={<Login />} />
+            <Route path='/movie/:id' element={<SingleMoviePage />} />
             <Route path='/signup' element={<Signup />} />
             <Route path='/genre' element={<Genre />}/>
           </Routes>
+          </div>
         </div>
-        {/* <MovieList/> */}
+        
         <Footer />
       </div>
 

@@ -13,16 +13,17 @@ function MovieList() {
   console.log(movieDB);
   // return the components
   return (
-    <div className="flex flex- justify-center items-center ">
-      {movieDB.map((movie) => (
-        <MovieCard
-          key={movie.id}
-          title={movie.original_title || movie.original_name || movie.title}
-          img={movie?.poster_path}
-        />
-      ))}
-
-
+    <div className="flex flex-col">
+      <div className='flex flex-wrap sm:justify-start justify-center gap-6'>
+        {movieDB.map((movie) => (
+          <MovieCard
+            key={movie.id}
+            id={movie.id}
+            title={movie.original_title || movie.original_name || movie.title}
+            img={movie?.poster_path}
+          />
+        ))}
+      </div>
     </div>
   );
 }

@@ -4,14 +4,9 @@ import { Link } from "react-router-dom";
 export default function Navbar({ fixed }) {
   const [showNav, setShow] = useState(false)
 
-<<<<<<< HEAD
-import "../styles/Navbar.css"
-import Login from "./Login";
-=======
   function closeMobile() {
     setShow(false);
   }
->>>>>>> sabrina-branch
 
   function toggleNav() {
     setShow(!showNav);
@@ -26,31 +21,8 @@ import Login from "./Login";
   window.onresize = closeMobileOnResize;
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
-<<<<<<< HEAD
-    <div >
-      <div className="nav-container" expand="lg"  sticky="top">
-        <Link to="/login" >
-          <div className="text-light">
-            <h4 className="nav-title-font">ScenAncis</h4>
-          </div>
-        </Link>
-        <ul className="navbar-nav ml-auto navitem-indent">
-          <li className="nav-item">
-            <Link to="/about">
-              <div className="nav-font text-light">Sign Up</div>
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/login">
-              <div className="nav-font text-light">Login</div>
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </div>
-=======
     <>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-emerald-500 mb-3">
+      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-emerald-500 ">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <div
@@ -108,6 +80,5 @@ import Login from "./Login";
         </div>
       </nav>
     </>
->>>>>>> sabrina-branch
   );
 }

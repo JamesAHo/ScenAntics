@@ -1,21 +1,18 @@
-import React from 'react';
-const poster_url = "https://image.tmdb.org/t/p/original"
+import React from "react";
+import { Link } from "react-router-dom";
+const poster_url = "https://image.tmdb.org/t/p/w300/";
 
-const MovieCard = ({movie, title, img}) => {
-
-    
-    
-
-    return (
-
-        <div >
-            <h2 className='font-bold text-sm items-center '>{title}</h2>
-            <img src={`${poster_url}${img}`} />
-           
-
-        </div>
-    )
-}
+const MovieCard = ({ movie, title, img ,id}) => {
+  return (
+    <div className="flex flex-col w-48 p-4 bg-white/5 bg-opacity-80 backdrop-blur-sm animate-slideup rounded-lg cursor-pointer">
+      <div className="relative w-full h-56 group">
+        <Link to={`/movie/${id}`}>
+        <img className="w-full h-full rounded-lg" src={`${poster_url}${img}`} />
+        </Link>
+      </div>
+      
+    </div>
+  );
+};
 
 export default MovieCard;
-
