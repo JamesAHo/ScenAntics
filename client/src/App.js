@@ -8,7 +8,6 @@ import Navbar from './components/Navbar';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Play from './components/Play';
-// import app.css
 
 
 // creating backend graphql link to initialize authentication
@@ -36,10 +35,17 @@ function App() {
       <div className="App">
         <Navbar />
         <Header />
+        {/* this might have to be rearranged vvv */}
+        <div className="flex items-center justify-center h-screen">
+      <div className="flex gap-x-4">
+        <Play className="bg-green-500 w-full h-40 px-40 m-6 text-4xl rounded-lg">Start Game</Play>
+        </div>
+        </div>
         <div class="container">
           <Routes>
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<Signup />} />
+            {/* <Route path='/genre' element={Genre />}/> */}
           </Routes>
         </div>
         {/* <MovieList/> */}
