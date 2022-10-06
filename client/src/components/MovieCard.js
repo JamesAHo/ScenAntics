@@ -8,8 +8,8 @@ const MovieCard = ({movie, title, img}) => {
 
     return (
 
-        <div className='flex flex-wrap w-[100px] mt-1 rounded-lg'>
-            <p>{title}</p>
+        <div >
+            <h2 className='font-bold text-sm items-center '>{title}</h2>
             <img src={`${poster_url}${img}`} />
            
 

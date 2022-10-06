@@ -13,7 +13,7 @@ function MovieList() {
   console.log(movieDB);
   // return the components
   return (
-    <div>
+    <div className="flex flex- justify-center items-center ">
       {movieDB.map((movie) => (
         <MovieCard
           key={movie.id}
@@ -21,6 +21,8 @@ function MovieList() {
           img={movie?.poster_path}
         />
       ))}
+
+
     </div>
   );
 }

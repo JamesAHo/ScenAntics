@@ -34,10 +34,23 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div className="App">
-            <Navbar />
-            <Header />
-            <MovieList/>
-            <Footer />
+        <Navbar />
+        <Header />
+        {/* this might have to be rearranged vvv */}
+        <div className="container">
+        <div className="flex items-center justify-center">
+      <div className="flex gap-x-4">
+        <Play/>
+        </div>
+        </div>
+          <Routes>
+            <Route path='/login' element={<Login />} />
+            <Route path='/signup' element={<Signup />} />
+            <Route path='/genre' element={<Genre />}/>
+          </Routes>
+        </div>
+        {/* <MovieList/> */}
+        <Footer />
       </div>
 
 
