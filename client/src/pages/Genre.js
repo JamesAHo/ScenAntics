@@ -1,16 +1,4 @@
 import React from 'react';
-import '../styles/Genre.css';
-
-
-// const styles = {
-//   GenreStyle: {
-//     background: '#003840',
-
-//   },
-// GenrefontStyle: {
-//     fontSize: '50px',
-//   },
-// };
 
 
 
