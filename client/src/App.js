@@ -10,7 +10,9 @@ import Login from './pages/Login';
 import MovieList from './pages/MovieList';
 import Play from './components/Play'
 import Genre from './pages/Genre'
+import Start from './pages/Start';
 import SingleMoviePage from './components/SingleMovie';
+import GamePage from './components/GamePage';
 // import app.css
 
 
@@ -52,6 +54,8 @@ function App() {
             <Route path='/movie/:id' element={<SingleMoviePage />} />
             <Route path='/signup' element={<Signup />} />
             <Route path='/genre' element={<Genre />}/>
+            <Route path='/start' element={<Start/>}/>
+            <Route path='/gamepage' element={<GamePage/>}/>
           </Routes>
           </div>
         </div>
