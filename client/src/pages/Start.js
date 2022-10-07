@@ -10,8 +10,8 @@ function Start() {
     return (
         <div className="start bg-green-700 min-h-screen">
             <div class="flex items-center justify-center -mx-1">
-                <p className="flex text-center justify-center font-apple-system text-2xl tracking-wide">How it started:</p> <br>TAKE A GROUP PIC BEFORE STARTING</br>
-                <p ></p>
+                <p className="flex text-center justify-center font-apple-system text-2xl tracking-wide">How it started: TAKE A GROUP PIC BEFORE STARTING
+                </p>
             </div>
             <main className="flex  items-center justify-center bg-green-700 font-apple-system">
                 <label for="dropzone-file" className=" cursor-pointer flex w-50 max-w-sm flex-col items-center rounded-l border-2 border-dashed border-green-400 bg-white p-6 text-center">
