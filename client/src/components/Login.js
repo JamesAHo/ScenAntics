@@ -9,12 +9,7 @@ import Login from '../components/Login';
 export default function LoginPage(){
     return(
         <>
-            <Header
-                heading = "Please login"
-                paragraph = "If you don't have an account please signup."
-                linkName = "Signup"
-                linkUrl = "/signup"
-                />
+            
             <Login/>
         </>
     )
