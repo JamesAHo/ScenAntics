@@ -47,6 +47,7 @@ function App() {
        
       <div className=" h-[calc(100vh-80px)] overflow-y-scroll hide-scrollbar flex xl:flex-row flex-col-reverse">
         <Play/>
+         
          <div className="flex-1 h-fit pb-40">
           <Routes>
             <Route path='/' element={<MovieList/>} />

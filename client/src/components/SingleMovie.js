@@ -1,18 +1,18 @@
-import React, {useState} from'react';
+import React from'react';
 import { useParams } from 'react-router-dom';
 import { useGetMoviesbyIdQuery } from '../redux/api/theMoviedb';
 const base_url = "https://image.tmdb.org/t/p/original"
 
 
 function SingleMoviePage () {
-    const {id} = useParams();
+    const { id } = useParams();
 
     const info = {
         id: id
     };
     const {data} = useGetMoviesbyIdQuery(info);
 
-    console.log(data)
+    
 
     return (
         
