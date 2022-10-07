@@ -25,6 +25,7 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
+    "daisyui": "^2.31.0",
     "react-router-dom": "^6.4.1"
   }
 }
