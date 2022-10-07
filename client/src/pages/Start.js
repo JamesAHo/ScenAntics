@@ -4,10 +4,11 @@ import React from 'react';
 
 
 
+
 function Start() {
     return (
         <div className="start">
-            <h1> Invite Your Buddies: {users} </h1>
+            <h1> Invite Your Buddies: </h1>
 
             <main class="flex min-h-screen items-center justify-center bg-gray-100 font-sans">
                 <label for="dropzone-file" class="mx-auto cursor-pointer flex w-full max-w-lg flex-col items-center rounded-xl border-2 border-dashed border-blue-400 bg-white p-6 text-center">
