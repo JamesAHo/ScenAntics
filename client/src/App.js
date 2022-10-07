@@ -13,7 +13,7 @@ import Genre from './pages/Genre'
 import Start from './pages/Start';
 import SingleMoviePage from './components/SingleMovie';
 import GamePage from './components/GamePage';
-// import app.css
+
 
 
 // creating backend graphql link to initialize authentication
