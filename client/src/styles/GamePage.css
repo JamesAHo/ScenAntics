@@ -18,12 +18,12 @@
     
   .card {
     background: green;
-    width: 40%;
-    height: 30%;
+    width: 20%;
+    height: 20%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    border-radius: 25px;
+    border-radius: 10px;
     padding: 2%;
     box-shadow: 10px 10px;
   }
@@ -39,27 +39,27 @@
       border-radius: 2%;
   }
 
-  .button {
-    position: relative;
+  /* .button {
+    position:static;
     outline: none;
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: 10px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     text-transform: uppercase;
-    height: 300px;
-    width: 300px;
+    height: 75px;
+    width: 200px;
     opacity: 1;
     color: #ffffff;
     background-color: #ffffff;
-    border: 1px solid rgba(11, 118, 72, 0.6);
-  }
+    border: 2px solid rgba(11, 118, 72, 0.6);
+  } */
       
-  .button span {
+  /* .button span {
     color: #10762d;
-    font-size: 13px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 300;
     letter-spacing: 0.7px;
   }
-      
+       */
