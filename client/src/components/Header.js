@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Header.css';
+import { Link } from 'react-router-dom';
 
 
 
@@ -8,9 +9,6 @@ const styles = {
     background: '#003840',
   
   },
-  headingStyle: {
-    fontSize: '50px',
-  },
 };
 
 
@@ -18,7 +16,9 @@ const styles = {
 function Header() {
   return (
     <header style={styles.headerStyle} className="header">
-      <h1 style={styles.headingStyle}> 🎬 ScenAntics 🍻 </h1>
+      <Link to="/">
+      <h1 className='text-6xl sticky'> 🎬 ScenAntics </h1>
+      </Link>
      
     </header>
   );

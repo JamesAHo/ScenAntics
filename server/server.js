@@ -1,6 +1,7 @@
 const express = require('express');
 const {ApolloServer} = require('apollo-server-express')
 const {typeDefs, resolvers} = require('./schemas')
+const {authMiddleware} = require('./utils/auth')
 require('dotenv').config();
 const path = require('path');
 const db = require('./config/connection')
@@ -9,7 +10,7 @@ const app = express();
 // setting up apollo server
 
 const server = new ApolloServer({
-  typeDefs, resolvers
+  typeDefs, resolvers, context: authMiddleware,
 });
 
 app.use(express.urlencoded({ extended: false }));
@@ -23,7 +24,7 @@ if (process.env.NODE_ENV === 'production') {
   
   app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
-    res.json({message: 'This is backend port'})
+   
   });
 
 

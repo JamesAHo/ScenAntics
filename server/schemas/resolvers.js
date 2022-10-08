@@ -15,15 +15,15 @@ const resolvers = {
             return Comment.find(params)
         },
         comment: async (parent, {CommentId}) => {
-            return Comment.findOne({_id: Comment.id})
+            return Comment.findOne({_id: CommentId})
         },
-        me: async(parent, arg, context) => {
+        me: async (parent, arg, context) => {
            try {
             if(context.user) {
                 return User.findOne({_id: context.user._id}).populate('comment')
             }
            } catch (error) {
-            AuthenticationError("Please log in")
+            throw new AuthenticationError("Please log in")
            }
         }
     },

@@ -2,13 +2,12 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 
-
-function Start() {
+function End() {
     return (
         <div className="start bg-green-700 min-h-screen">
             <div class="flex items-center justify-center -mx-1">
-                <p className="flex text-center justify-center font-apple-system text-2xl text-black tracking-wide">How it started: TAKE A GROUP PIC BEFORE STARTING
-                </p>
+                <p className="flex text-center justify-center font-apple-system text-2xl tracking-wide">How it Ended: TAKE A FINAL GROUP PICTURE OF THE AFTERMATH</p> 
+                
             </div>
             <main className="flex  items-center justify-center bg-green-700 font-apple-system">
                 <label for="dropzone-file" className=" cursor-pointer flex w-50 max-w-sm flex-col items-center rounded-l border-2 border-dashed border-green-400 bg-white p-6 text-center">
@@ -24,24 +23,12 @@ function Start() {
                 </label>
             </main>
             <p className='font-apple-system text-xl text-center break-normal leading-loose p-8'> 
-            <ul className='text-center text-black tracking-wide list-outside'>
-             <li>HOW TO PLAY:</li>   
-
-             <li>   Grab a drink of your choice or if you choose not to drink we have some activities you can do to play along.</li>
-
-               <li> Each player with take their turn and take a sip whenever 'this' or 'that' happens on screen, this will vary with each timed round.</li> 
-               <li>(IF IT DOES NOT HAPPEN IN THE TIME ALLOTED THEN YOU ARE SAVED) </li>
-
-              <li>  Hit NEXT for the next player to take their turn. </li>
-
-              <li>  FOR the non-drinkers you will do the action on the game screen calls for if 'this' or 'that' happens on screen.</li>
-                </ul>
+                THANK YOU FOR PLAYING. 
             </p>
 
-
             <div className='flex justify-center'>
-                <Link to='/gamepage'>
-                    <button className="btn items-center  btn-outline btn-warning text-2xl w-64 h-5 font-apple-system text-black">PLAY</button>
+                <Link to='/'>
+                    <button className="btn items-center btn-outline btn-warning w-64 h-5 font-apple-system text-black">HOME</button>
                 </Link>
             </div>
         </div>
@@ -49,4 +36,4 @@ function Start() {
 
     );
 }
-export default Start;
+export default End;

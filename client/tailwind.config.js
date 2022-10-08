@@ -2,7 +2,14 @@
 module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    fontFamily: {
+      
+    },
+    extend: {
+      animation: {
+        slideup: 'slideup 1s ease-in-out',
+      }
+    },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }
