@@ -10,7 +10,7 @@ function Start() {
     return (
         <div className="start bg-green-700 min-h-screen">
             <div class="flex items-center justify-center -mx-1">
-                <p className="flex text-center justify-center font-apple-system text-2xl tracking-wide">How it started: TAKE A GROUP PIC BEFORE STARTING
+                <p className="flex text-center justify-center font-apple-system text-2xl text-black tracking-wide">How it started: TAKE A GROUP PIC BEFORE STARTING
                 </p>
             </div>
             <main className="flex  items-center justify-center bg-green-700 font-apple-system">
@@ -27,7 +27,7 @@ function Start() {
                 </label>
             </main>
             <p className='font-apple-system text-xl text-center break-normal leading-loose p-8'> 
-            <ul className='text-center'>
+            <ul className='text-center text-black tracking-wide '>
              <li>HOW TO PLAY:</li>   
 
              <li>   Grab a drink of your choice or if you choose not to drink we have some activities you can do to play along.</li>
@@ -44,7 +44,7 @@ function Start() {
 
             <div className='flex justify-center'>
                 <Link to='/gamepage'>
-                    <button className="btn items-center btn-active btn-secondary w-64 h-5 font-apple-system text-black">PLAY</button>
+                    <button className="btn items-center btn-outline btn-warning text-2xl w-64 h-5 font-apple-system text-black">PLAY</button>
                 </Link>
             </div>
         </div>
