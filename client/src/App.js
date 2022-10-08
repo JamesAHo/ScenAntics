@@ -13,7 +13,7 @@ import Genre from './pages/Genre'
 import Start from './pages/Start';
 import SingleMoviePage from './components/SingleMovie';
 import GamePage from './components/GamePage';
-import Countdown from './components/GamePage';
+import End from './pages/End';
 
 
 
@@ -45,10 +45,12 @@ function App() {
        
         <Navbar />
         <Header />
+        <Play/>
         {/* this might have to be rearranged vvv */}
        
       <div className=" h-[calc(100vh-80px)] overflow-y-scroll hide-scrollbar flex xl:flex-row flex-col-reverse">
-        <Play/>
+        
+         
          <div className="flex-1 h-fit pb-40">
           <Routes>
             <Route path='/' element={<MovieList/>} />
@@ -58,7 +60,7 @@ function App() {
             <Route path='/genre' element={<Genre />}/>
             <Route path='/start' element={<Start/>}/>
             <Route path='/gamepage' element={<GamePage/>}/>
-            {/* <Countdown hoursMinsSec={hoursMinsSec}/> */}
+            <Route path='./end' element={<End/>}/>
           </Routes>
           </div>
         </div>

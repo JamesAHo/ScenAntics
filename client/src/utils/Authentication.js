@@ -1,25 +1,28 @@
 import decode from 'jwt-decode';
 
 class Auth {
+
     getUser() {
         return decode(this.getToken());
     }
     loggedIn() {
         const token = this.getToken();
-        // check to see if token is still valid
-        return !!token & !this.toTokenExpired(token)
-    }
+        
+        return token && !this.isTokenExpired(token) ? true : false;
+      }
+    
     isTokenExpired(token) {
-        try {
-            const decoded = decode(token);
-            if(decoded.exp < Date.now() / 1000) {
-                return true
-            } else return false;
-        } catch (error) {
-            return false
+        
+        const decoded = decode(token);
+       
+        if (decoded.exp < Date.now() / 1000) {
+          localStorage.removeItem('id_token');
+          return true;
         }
-    }
-    getUser() {
+       
+        return false;
+      }
+    getToken() {
         return localStorage.getItem('id_token');
     }
     login(idToken) {
@@ -28,8 +31,8 @@ class Auth {
     }
     logout() {
         localStorage.removeItem('id_token');
-        window.location('/')
+        window.location.reload('/')
     }
 } 
 
-export default new Auth()
+export default new Auth();

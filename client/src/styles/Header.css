@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;400&family=Bree+Serif&family=Kaushan+Script&family=Luckiest+Guy&family=Montserrat:wght@200;300&family=Pompiere&family=Russo+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200;400&family=Bree+Serif&family=Kaushan+Script&family=Luckiest+Guy&family=Montserrat:wght@200;300&family=Pompiere&family=Russo+One&family=Shrikhand&display=swap");
 
 .header {
   background:#003840;
@@ -8,10 +8,10 @@
 
 .header h1 {
   margin: 0;
- 
+  padding:20px;
   text-align: center;
-  color: #02A676;
-  font-size: 3rem;
-  font-family: 'Luckiest Guy', cursive;; 
-  font-weight: lighter;
+  color: #A0CD60;
+  
+  font-family: 'Shrikhand', cursive;
+  
 }

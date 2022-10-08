@@ -3,17 +3,18 @@ import { Link } from "react-router-dom";
 
 export default function PlayGame() {
   const [show, setShow] = useState(true)
-    const hideButton = () => {
-      setShow(!show)
-    }
+  const hideButton = () => {
+    setShow(!show)
+  }
 
   return (
+    <div className='flex justify-center'>
     <Link to="/genre">
       {show && <button
         type="submit"
-        className={
-          `inline-flex items-center h-40 w-full px-20 py-6 bg-green-600 border border-transparent rounded-md font-semibold text-2xl text-white uppercase tracking-widest active:bg-green-900 transition ease-in-out duration-150` 
-        }
+        className=
+        "flex justify-center text-center h-30 w-6 px-20 py-5  bg-green-600 border border-transparent rounded-md font-semibold text-2xl text-white uppercase tracking-widest active:bg-green-900 transition ease-in-out duration-150"
+
         onClick={() => {
           hideButton()
         }}
@@ -22,6 +23,7 @@ export default function PlayGame() {
       </button>
       }
     </Link>
+    </div>
   );
 }
 
