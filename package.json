@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "daisyui": "^2.31.0",
+    "react-countdown": "^2.3.2",
     "dotenv": "^16.0.3",
     "react-router-dom": "^6.4.1"
   }

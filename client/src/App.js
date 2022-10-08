@@ -39,6 +39,7 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const hoursMinsSec = {hours: 0, minutes: 0, seconds: 59}
   return (
     <ApolloProvider client={client}>
       
@@ -62,7 +63,7 @@ function App() {
             <Route path='/genre' element={<Genre />}/>
             <Route path='/start' element={<Start/>}/>
             <Route path='/gamepage' element={<GamePage/>}/>
-            <Route path='./end' element={<End/>}/>
+            <Route path='/end' element={<End/>}/>
           </Routes>
           </div>
         </div>

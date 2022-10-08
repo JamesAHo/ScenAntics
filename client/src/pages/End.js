@@ -28,7 +28,7 @@ function End() {
 
             <div className='flex justify-center'>
                 <Link to='/'>
-                    <button className="btn items-center btn-active btn-secondary w-64 h-5 font-apple-system text-black">HOME</button>
+                    <button className="btn items-center btn-outline btn-warning w-64 h-5 font-apple-system text-black">HOME</button>
                 </Link>
             </div>
         </div>
