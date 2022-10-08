@@ -30,7 +30,7 @@ const signupInputs=[
         type: "text",
         autoComplete: "username",
         isRequired: true,
-        placeholder: "Username"   
+        placeholder: "Name"   
     },
     {
         labelText: "Email address",
@@ -52,7 +52,16 @@ const signupInputs=[
         isRequired: true,
         placeholder: "Password"   
     },
-   
+    {
+        labelText: "Confirm Password",
+        labelFor: "confirm-password",
+        id: "confirm-password",
+        name: "confirm-password",
+        type: "password",
+        // autoComplete: "confirm-password",
+        // isRequired: true,
+        // placeholder: "Confirm Password"   
+    }
 ]
 
 export {loginInputs,signupInputs}
