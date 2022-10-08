@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import { useMutation } from '@apollo/client';
 import {SIGN_UP} from '../utils/mutations'
 import Auth from '../utils/Authentication'
-const style ="rounded-md appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
+const style ="flex items-center justify-center rounded-md appearance-none relative block w-80 mt-3  px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
 
 
 
@@ -41,10 +41,10 @@ export default function Signup(){
     return(
      
       <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
-          <div className="card-body">
+      <div className="flex-row justify-center mb-4">
+        <div className="flex items-center justify-center">
+          
+          <div className="flex items-center justify-center">
             {data ? (
               <p>
                 Success! You may now head{' '}
@@ -52,6 +52,7 @@ export default function Signup(){
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
+                <h4 className=" text-left">Sign Up</h4>
                 <input
                   className={style}
                   placeholder="Your username"
@@ -77,7 +78,7 @@ export default function Signup(){
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-info"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >

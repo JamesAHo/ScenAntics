@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import {useMutation} from '@apollo/client';
 import { LOGIN_QUERY } from '../utils/mutations'; 
 import Auth from '../utils/Authentication';
-const style ="rounded-md appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
+const style ="flex items-center justify-center rounded-md appearance-none relative block w-80 mt-3  px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
 
 export default function Login(){
     const [formState, setFormState] = useState({email: "", password: ""});
@@ -31,11 +31,11 @@ export default function Login(){
     }   
 
     return(
-        <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
-          <div className="card-body">
+      <main className="flex-row justify-center mb-4 ">
+      <div className="flex-row justify-center mb-4 ">
+        <div className="flex items-center justify-center">
+         
+          <div className="flex items-center justify-center">
             {data ? (
               <p>
                 Welcome to ScenAntics!!
@@ -43,6 +43,7 @@ export default function Login(){
               </p>
             ) : (
               <form onSubmit={handleSubmit}>
+                <h4 className="card-header bg-dark text-light p-2">Login</h4>
                 <input
                   className={style}
                   placeholder="Your email"
@@ -60,7 +61,7 @@ export default function Login(){
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-info"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >

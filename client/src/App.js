@@ -12,6 +12,8 @@ import Play from './components/Play'
 import Genre from './pages/Genre'
 import Start from './pages/Start';
 import SingleMoviePage from './components/SingleMovie';
+import UserProfile from './pages/userProfile';
+
 import GamePage from './components/GamePage';
 import End from './pages/End';
 
@@ -55,6 +57,7 @@ function App() {
           <Routes>
             <Route path='/' element={<MovieList/>} />
             <Route path='/login' element={<Login />} />
+            <Route path="/me" element={<UserProfile />} />
             <Route path='/movie/:id' element={<SingleMoviePage />} />
             <Route path='/signup' element={<Signup />} />
             <Route path='/genre' element={<Genre />}/>

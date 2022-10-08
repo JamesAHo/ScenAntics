@@ -23,3 +23,13 @@ mutation Login($email: String!, $password: String!) {
   }
 }
 `;
+export const ADD_COMMENT = gql`
+mutation AddComment($commentText: String) {
+  addComment(CommentText: $commentText) {
+    _id
+    CommentText
+    createdAt
+    CommentAuthor
+  }
+}
+`
