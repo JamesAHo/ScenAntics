@@ -15,11 +15,11 @@ html{
     scroll-behavior: smooth
   }
   .active {
-    @apply text-cyan-500;
+    @apply text-green-500;
   }
   
   .active svg {
-    @apply text-cyan-500;
+    @apply text-green-500;
   }
   
   .bar:nth-child(2) {

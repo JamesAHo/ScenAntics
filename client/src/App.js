@@ -37,6 +37,7 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const hoursMinsSec = {hours: 0, minutes: 0, seconds: 59}
   return (
     <ApolloProvider client={client}>
       
