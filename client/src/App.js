@@ -15,6 +15,7 @@ import SingleMoviePage from './components/SingleMovie';
 import UserProfile from './pages/userProfile';
 
 import GamePage from './components/GamePage';
+import End from './pages/End';
 
 
 
@@ -49,7 +50,7 @@ function App() {
         {/* this might have to be rearranged vvv */}
        
       <div className=" h-[calc(100vh-80px)] overflow-y-scroll hide-scrollbar flex xl:flex-row flex-col-reverse">
-       
+        
          
          <div className="flex-1 h-fit pb-40">
           <Routes>
@@ -61,6 +62,7 @@ function App() {
             <Route path='/genre' element={<Genre />}/>
             <Route path='/start' element={<Start/>}/>
             <Route path='/gamepage' element={<GamePage/>}/>
+            <Route path='./end' element={<End/>}/>
           </Routes>
           </div>
         </div>
