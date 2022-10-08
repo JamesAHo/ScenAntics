@@ -1,0 +1,65 @@
+#root, html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+    
+  .app {
+    height: 100%;
+    background:green;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+    
+  .card {
+    background: green;
+    width: 40%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 25px;
+    padding: 2%;
+    box-shadow: 10px 10px;
+  }
+    
+  .heading {
+    display: flex;
+    align-items: center;
+    height: 350px;
+    font-family: 'Spartan', sans-serif;
+  }
+    
+  .drink {
+      border-radius: 2%;
+  }
+
+  .button {
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 300px;
+    width: 300px;
+    opacity: 1;
+    color: #ffffff;
+    background-color: #ffffff;
+    border: 1px solid rgba(11, 118, 72, 0.6);
+  }
+      
+  .button span {
+    color: #10762d;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+  }
+      
