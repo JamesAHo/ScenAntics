@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+
 import Auth from "../utils/Authentication";
 
-export default function Navbar() {
-  
 
-  
+export default function Navbar() {
+   
+
+
+
+
+
+    // logout login 
     const logout = (event) => {
       event.preventDefault();
       Auth.logout();
@@ -24,19 +30,20 @@ export default function Navbar() {
         <div>
           {Auth.loggedIn() ? (
             <>
-              <Link className="btn btn-lg btn-info m-2" to="/me">
+              {/* <Link className="ml-2" to="/me">
                 {Auth.getUser().data.name}'s profile
-              </Link>
-              <button className="" onClick={logout}>
+              </Link> */}
+
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={logout}>
                 Logout
               </button>
             </>
           ) : (
             <>
-              <Link className="" to="/login">
+              <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" to="/login">
                 Login
               </Link>
-              <Link className="" to="/signup">
+              <Link className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" to="/signup">
                 Signup
               </Link>
             </>

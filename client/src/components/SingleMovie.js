@@ -12,18 +12,20 @@ function SingleMoviePage () {
     };
     const {data} = useGetMoviesbyIdQuery(info);
 
-    
+    console.log(data)
 
     return (
-        
-            <div className='w-screen h-screen relative overflow-hidden mr-4' style={{backgroundSize: 'cover', backgroundImage: `url(${base_url}${data?.backdrop_path})`,backgroundPosition: "center center"}} >
-                <div className='flex flex-col gap-5 '>
-                    {data?.overview}
-                </div>
+        <div className='flex-auto'>
+            <div className=' justify-end w-screen h-screen  overflow-hidden relative' style={{backgroundSize: 'cover', backgroundImage: `url(${base_url}${data?.backdrop_path})`, }} >
+                <p>this is images</p>
+            </div>
+            {/* {comment section} */}
+            <div className='w-1/2 justify-start overflow-hidden'>
+                
             </div>
 
         
-        
+        </div>   
         
     )
 }

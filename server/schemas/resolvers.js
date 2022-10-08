@@ -15,7 +15,7 @@ const resolvers = {
             return Comment.find(params)
         },
         comment: async (parent, {CommentId}) => {
-            return Comment.findOne({_id: Comment.id})
+            return Comment.findOne({_id: CommentId})
         },
         me: async (parent, arg, context) => {
            try {

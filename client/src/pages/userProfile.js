@@ -23,7 +23,7 @@ const UserProfile = () => {
         return <div>Loading ...</div>
     }
 
-    if(!user?.name) {
+    if(!User?.name) {
         return (
             <h4>Please log in to see content !</h4>
         );
@@ -33,8 +33,8 @@ const UserProfile = () => {
     return (
        <div>
             <div className="flex-row justify-center">
-                <h4>Viewing {userParam ? `${User.name}'s` : 'your'} profile</h4>
-
+                
+                
             </div>
        </div>
     )
