@@ -9,7 +9,8 @@
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
     "build": "cd client && npm run build",
-    "deploy": "cd sever && npm run start"
+    "deploy": "cd sever && npm run start",
+    "server": "cd server && npm run start"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,7 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
-    "daisyui": "^2.31.0",
+  
     "react-router-dom": "^6.4.1"
   }
 }
