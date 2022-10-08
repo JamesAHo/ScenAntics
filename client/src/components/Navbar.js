@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import Auth from "../utils/Authentication";
@@ -30,9 +30,9 @@ export default function Navbar() {
         <div>
           {Auth.loggedIn() ? (
             <>
-              {/* <Link className="ml-2" to="/me">
+              <Link>
                 {Auth.getUser().data.name}'s profile
-              </Link> */}
+              </Link>
 
               <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={logout}>
                 Logout
